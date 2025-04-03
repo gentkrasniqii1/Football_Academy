@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adem Jashari Cup page</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<style>
+    body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+      .bracket-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .round {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            width: 250px;
+        }
+
+        .round h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .match {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #111;
+            width: 90%;
+        }
+
+        .match span {
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+
+        .final {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .final h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .final .match {
+            width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .bracket-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .round {
+                width: 100%;
+            }
+        }
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Real Madrid Logo">
+
+        </div>
+
+        <div class="menu" id="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#historic">Historic</a>
+            <a href="#trainers">Trainers</a>
+            <a href="shop.html">Shop</a>
+            <a href="sponsors.html">Sponsors</a>
+            <a href="loginandRegister.html" class="sign-in">Sign In</a>
+        </nav>
+    </header>
+    <div class="bracket-container">
+        <!-- Left Side -->
+        <div class="round">
+            <h2>Round 1</h2>
+            <div class="match">
+                <span>Team 1</span>
+                <span>vs</span>
+                <span>Team 2</span>
+            </div>
+            <div class="match">
+                <span>Team 3</span>
+                <span>vs</span>
+                <span>Team 4</span>
+            </div>
+            <!-- Add more matches as needed -->
+        </div>
+
+        <div class="round">
+            <h2>Round 2</h2>
+            <div class="match">
+                <span>Winner 1</span>
+                <span>vs</span>
+                <span>Winner 2</span>
+            </div>
+            <!-- Add more matches as needed -->
+        </div>
+
+        <!-- Final -->
+        <div class="final">
+            <h2>Final</h2>
+            <div class="match">
+                <span>Finalist 1</span>
+                <span>vs</span>
+                <span>Finalist 2</span>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Football</h3>
+                <ul>
+                    <li><a href="#">First Team</a></li>
+                    <li><a href="#">Academy</a></li>
+                    <li><a href="#">Women's Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Basketball</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>The Club</h3>
+                <ul>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    <li><a href="#">Values</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Bernabéu Stadium</h3>
+                <ul>
+                    <li><a href="matchdaytour.html">Tour</a></li>
+                    <li><a href="testtwotiketat.html">Tickets</a></li>
+                    <li><a href="schedule.html">Schedules</a></li>
+                </ul>
+                <div class="footer-apps">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+                    <img src="appstore.svg" alt="App Store">
+                    <img src="huawei.svg" alt="Huawei App Gallery">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section id="sponsors">
+        <div class="sponsors-row">
+            <img src="emirates.svg" alt="Emirates Logo">
+            <img src="adidas.svg" alt="Adidas Logo">
+            <img src="hp.svg" alt="HP Logo">
+        </div>
+        <div class="sponsors-row">
+            <img src="mahou.svg" alt="Mahou Logo">
+            <img src="dubai.svg" alt="Dubai Logo">
+            <img src="bmw.svg" alt="BMW Logo">
+            <img src="ea-sports.svg" alt="EA Sports Logo">
+            <img src="abbot.svg" alt="Abbott Logo">
+            <img src="nivea.svg" alt="Nivea Men Logo">
+            <img src="cantabria.svg" alt="Cantabria Labs Logo">
+            <img src="linglong.svg" alt="Linglong Tire Logo">
+        </div>
+        <div class="sponsors-row">
+            <img src="easymarkets.svg" alt="Easy Markets Logo">
+            <img src="adobe.svg" alt="Adobe Logo">
+            <img src="zegna.svg" alt="Zegna Logo">
+            <img src="palladium.svg" alt="Palladium Hotel Logo">
+            <img src="daktronics.svg" alt="Daktronics Logo">
+            <img src="cisco.svg" alt="Cisco Logo">
+            <img src="softtek.svg" alt="Softtek Logo">
+            <img src="canon.svg" alt="Canon Medical Logo">
+        </div>
+        <div class="sponsors-row">
+            <img src="unicaja.svg" alt="Unicaja Logo">
+            <img src="orange.svg" alt="Orange Logo">
+            <img src="hisense.svg" alt="Hisense Logo">
+            <img src="playstation.svg" alt="PlayStation Logo">
+            <img src="codere.svg" alt="Codere Logo">
+            <img src="sanitas.svg" alt="Sanitas Logo">
+            <img src="cocacola.svg" alt="Coca Cola Logo">
+            <img src="solan.svg" alt="Solan De Cabras Logo">
+        </div>
+    </section>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+
+        // Toggle the navigation menu for small screens
+        const menu = document.getElementById('menu');
+        const navbar = document.getElementById('navbar');
+
+        menu.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Close the menu when clicking on a link
+        const links = navbar.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
