@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar & Matches</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.calendar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.months {
+  display: flex;
+  gap: 10px;
+}
+
+.month {
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.month.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.month:hover {
+  background-color: #e0e0e0;
+}
+
+.go-to-today {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.go-to-today:hover {
+  background-color: #0056b3;
+}
+
+/* Matches Section */
+.matches {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.match-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.match-card:hover {
+  transform: translateY(-5px);
+}
+
+.match-info .teams {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.match-info .competition {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.match-info .date {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Card Types */
+.match-card.upcoming {
+  border-left: 5px solid #007bff;
+}
+
+.match-card.completed {
+  border-left: 5px solid #28a745;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .go-to-today {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+
+  .month {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+</style>
+
+<body>
+  <header>
+    <nav class="calendar-nav">
+      <div class="months">
+        <button class="month">Jul</button>
+        <button class="month">Aug</button>
+        <button class="month">Sep</button>
+        <button class="month">Oct</button>
+        <button class="month">Nov</button>
+        <button class="month active">Dec</button>
+        <button class="month">Jan</button>
+        <button class="month">Feb</button>
+      </div>
+      <button class="go-to-today">Go to current date</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="matches">
+      <!-- Match Card -->
+      <div class="match-card upcoming">
+        <div class="match-info">
+          <p class="teams">Real Madrid C vs CD Unión Sur Yaiza</p>
+          <p class="competition">Segunda Federación Grupo 5 - Jornada 14</p>
+          <p class="date">Dec 1 (date and time to be confirmed)</p>
+        </div>
+      </div>
+
+      <div class="match-card completed">
+        <div class="match-info">
+          <p class="teams">ASVEL Villeurbanne 80 - 78 Real Madrid</p>
+          <p class="competition">Euroleague - Matchday 13</p>
+          <p class="date">Dec 3, 8:00 PM</p>
+        </div>
+      </div>
+
+      <div class="match-card completed">
+        <div class="match-info">
+          <p class="teams">Athletic Club 2 - 1 Real Madrid</p>
+          <p class="competition">La Liga - Matchday 19</p>
+          <p class="date">Dec 4, 9:00 PM</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Example: Highlight the current month dynamically
+const today = new Date();
+const currentMonth = today.toLocaleString('default', { month: 'short' });
+const months = document.querySelectorAll('.month');
+
+months.forEach((month) => {
+  if (month.textContent === currentMonth) {
+    month.classList.add('active');
+  }
+});
+
+// Scroll to top when clicking "Go to current date"
+const goToTodayButton = document.querySelector('.go-to-today');
+goToTodayButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

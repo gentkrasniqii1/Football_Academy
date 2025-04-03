@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Sellers</title>
+    <link rel="stylesheet" href="test.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        
+        header {
+            background-color: #002b5c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        
+        h2 {
+            color: #002b5c;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .product-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        
+        .product-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-item img {
+            width: 100%;
+            max-width: 180px;
+            margin: 0 auto 10px;
+            border-radius: 5px;
+        }
+        
+        .product-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .product-price {
+            color: #e76f51;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .product-btn {
+            display: inline-block;
+            background-color: #002b5c;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .product-btn:hover {
+            background-color: #f4a261;
+        }
+        
+        footer {
+            background-color: #f9f9f9;
+            padding: 20px 10px;
+            border-top: 1px solid #ddd;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+        
+        .footer-column h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-column ul li {
+            margin: 5px 0;
+        }
+        
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #555;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #000;
+        }
+        
+        .footer-apps {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .footer-apps img {
+            width: 120px;
+            height: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-column {
+                min-width: 100%;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .footer-apps img {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Real Madrid Logo">
+
+        </div>
+
+        <div class="menu" id="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav id="navbar">
+            <a href="index.html" style="color: #fff;">Home</a>
+            <a href="#about-section" style="color: #fff;">About</a>
+            <a href="#historic-section" style="color: #fff;">Historic</a>
+            <a href="#trainers-section" style="color: #fff;">Trainers</a>
+            <a href="shop.html" style="color: #fff;">Shop</a>
+            <a href="sponsors.html" style="color: #fff;">Sponsors</a>
+            <a href="loginandRegister.html" class="sign-in" style="color: #fff;border: 1px solid #fff;">Sign In</a>
+        </nav>
+
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+
+        // Toggle the navigation menu for small screens
+        const menu = document.getElementById('menu');
+        const navbar = document.getElementById('navbar');
+
+        menu.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Close the menu when clicking on a link
+        const links = navbar.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+            });
+        });
+    </script>
+
+    <div class="container">
+        <h2>Best Sellers</h2>
+
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="adidasshoes.webp" alt="Adidas Shoes">
+                <div class="product-title">adidas Gazelle Rekive 24/25 Charcoal</div>
+                <div class="product-price">$150.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+
+            <div class="product-item">
+                <img src="adidasjacket.jpg" alt="Winter Jacket">
+                <div class="product-title">Mens Training Winter Jacket 24/25 White</div>
+                <div class="product-price">$215.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+
+            <div class="product-item">
+                <img src="tshirtadidas.jpg" alt="Home Kit">
+                <div class="product-title">Youth Home Kit 24/25 White</div>
+                <div class="product-price">$140.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+
+            <div class="product-item">
+                <img src="ball.webp" alt="All Weather Jacket">
+                <div class="product-title">Official Match Ball for 24/25 Season</div>
+                <div class="product-price">$125.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+
+            <div class="product-item">
+                <img src="shorts.webp" alt="Ball">
+                <div class="product-title">Mens UCL Training All Weather Jacket 24/25</div>
+                <div class="product-price">$120.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+
+            <div class="product-item">
+                <img src="hoodie.jpg" alt="Cap">
+                <div class="product-title">Mens hoodies for 2024/25 Season</div>
+                <div class="product-price">$30.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+            <div class="product-item">
+                <img src="socks.webp" alt="Home Kit">
+                <div class="product-title">Youth Home Kit 24/25 White</div>
+                <div class="product-price">$140.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+            <div class="product-item">
+                <img src="tracksuit.jpg" alt="Home Kit">
+                <div class="product-title">Youth Home Kit 24/25 White Season</div>
+                <div class="product-price">$140.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+            <div class="product-item">
+                <img src="shorts.jpg" alt="Home Kit">
+                <div class="product-title">Youth Home Kit 24/25 White</div>
+                <div class="product-price">$140.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+            <div class="product-item">
+                <img src="tracksuittwo.jpg" alt="Home Kit">
+                <div class="product-title">Youth Home Kit 24/25 White</div>
+                <div class="product-price">$140.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+            <div class="product-item">
+                <img src="euroball-removebg-preview.png" alt="Home Kit">
+                <div class="product-title">Youth Home Kit 24/25 White</div>
+                <div class="product-price">$140.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+            <div class="product-item">
+                <img src="bootstwo.jpg" alt="Home Kit">
+                <div class="product-title">Youth Home Kit 24/25 White.</div>
+                <div class="product-price">$140.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+            <div class="product-item">
+                <img src="tracksuitthree.jpg" alt="Home Kit">
+                <div class="product-title">Youth Home Kit 24/25 White</div>
+                <div class="product-price">$140.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+            <div class="product-item">
+                <img src="redshorts.jpg" alt="Home Kit">
+                <div class="product-title">Youth Home Kit 24/25 White</div>
+                <div class="product-price">$140.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+            <div class="product-item">
+                <img src="gloves.jpg" alt="Home Kit">
+                <div class="product-title">Youth Home Kit 24/25 White</div>
+                <div class="product-price">$140.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+            <div class="product-item">
+                <img src="sockstwo.webp" alt="Home Kit">
+                <div class="product-title">Youth Home Kit 24/25 White</div>
+                <div class="product-price">$140.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+            <div class="product-item">
+                <img src="ballthree.jpg" alt="Home Kit">
+                <div class="product-title">Youth Home Kit 24/25 White</div>
+                <div class="product-price">$140.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+            <div class="product-item">
+                <img src="lightjacket.jpg" alt="Home Kit">
+                <div class="product-title">Youth Home Kit 24/25 White</div>
+                <div class="product-price">$140.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+            <div class="product-item">
+                <img src="mainkit.webp" alt="Home Kit">
+                <div class="product-title">Youth Home Kit 24/25 White</div>
+                <div class="product-price">$140.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+            <div class="product-item">
+                <img src="shortsfour.avif" alt="Home Kit">
+                <div class="product-title">Youth Home Kit 24/25 White</div>
+                <div class="product-price">$140.00</div>
+                <a href="#" class="product-btn">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Football</h3>
+                <ul>
+                    <li><a href="#">First Team</a></li>
+                    <li><a href="#">Academy</a></li>
+                    <li><a href="#">Women's Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Basketball</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>The Club</h3>
+                <ul>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    <li><a href="#">Values</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Bernabéu Stadium</h3>
+                <ul>
+                    <li><a href="#">Tour</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                    <li><a href="#">RM Play</a></li>
+                </ul>
+                <div class="footer-apps">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+                    <img src="appstore.svg" alt="App Store">
+                    <img src="huawei.svg" alt="Huawei App Gallery">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <br>
+    <section id="sponsors">
+        <div class="sponsors-row">
+            <img src="emirates.svg" alt="Emirates Logo">
+            <img src="adidas.svg" alt="Adidas Logo">
+            <img src="hp.svg" alt="HP Logo">
+        </div>
+        <div class="sponsors-row">
+            <img src="mahou.svg" alt="Mahou Logo">
+            <img src="dubai.svg" alt="Dubai Logo">
+            <img src="bmw.svg" alt="BMW Logo">
+            <img src="ea-sports.svg" alt="EA Sports Logo">
+            <img src="abbot.svg" alt="Abbott Logo">
+            <img src="nivea.svg" alt="Nivea Men Logo">
+            <img src="cantabria.svg" alt="Cantabria Labs Logo">
+            <img src="linglong.svg" alt="Linglong Tire Logo">
+        </div>
+        <div class="sponsors-row">
+            <img src="easymarkets.svg" alt="Easy Markets Logo">
+            <img src="adobe.svg" alt="Adobe Logo">
+            <img src="zegna.svg" alt="Zegna Logo">
+            <img src="palladium.svg" alt="Palladium Hotel Logo">
+            <img src="daktronics.svg" alt="Daktronics Logo">
+            <img src="cisco.svg" alt="Cisco Logo">
+            <img src="softtek.svg" alt="Softtek Logo">
+            <img src="canon.svg" alt="Canon Medical Logo">
+        </div>
+        <div class="sponsors-row">
+            <img src="unicaja.svg" alt="Unicaja Logo">
+            <img src="orange.svg" alt="Orange Logo">
+            <img src="hisense.svg" alt="Hisense Logo">
+            <img src="playstation.svg" alt="PlayStation Logo">
+            <img src="codere.svg" alt="Codere Logo">
+            <img src="sanitas.svg" alt="Sanitas Logo">
+            <img src="cocacola.svg" alt="Coca Cola Logo">
+            <img src="solan.svg" alt="Solan De Cabras Logo">
+        </div>
+    </section>
+
+
+
+
+</body>
+
+</html>

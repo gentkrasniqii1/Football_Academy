@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+        /* Basic Styles */
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            height: 40px;
+        }
+        
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #007bff;
+        }
+        
+        .menu {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .menu div {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+        }
+        
+        .sign-in {
+            border: 1px solid #007bff;
+            color: #007bff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .sign-in:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: #fff;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+                padding: 10px;
+            }
+            nav.active {
+                display: flex;
+            }
+            .menu {
+                display: flex;
+            }
+        }
+        
+        section {
+            padding: 100px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png" alt="Real Madrid Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/en/f/f3/Real_Madrid_15_UEFA_Champions_League_titles_emblem.png" alt="15 Titles Logo">
+        </div>
+
+        <div class="menu" id="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav id="navbar">
+            <a href="#madridistas">Madridistas</a>
+            <a href="#tickets">Tickets</a>
+            <a href="#hospitality">Hospitality</a>
+            <a href="#tour">Tour</a>
+            <a href="#shop">Shop</a>
+            <a href="#rmplay">RM Play</a>
+            <a href="#signin" class="sign-in">Sign In</a>
+        </nav>
+    </header>
+
+    <section id="madridistas">
+        <h1>Madridistas</h1>
+        <p>Welcome to the Madridistas section.</p>
+    </section>
+    <section id="tickets">
+        <h1>Tickets</h1>
+        <p>Explore ticket options and availability.</p>
+    </section>
+    <section id="hospitality">
+        <h1>Hospitality</h1>
+        <p>Discover our premium hospitality services.</p>
+    </section>
+    <section id="tour">
+        <h1>Tour</h1>
+        <p>Experience the Real Madrid stadium tour.</p>
+    </section>
+    <section id="shop">
+        <h1>Shop</h1>
+        <p>Find the latest merchandise at our shop.</p>
+    </section>
+    <section id="rmplay">
+        <h1>RM Play</h1>
+        <p>Enjoy exclusive Real Madrid videos on RM Play.</p>
+    </section>
+
+    <script>
+        // Toggle the navigation menu for small screens
+        const menu = document.getElementById('menu');
+        const navbar = document.getElementById('navbar');
+
+        menu.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Close the menu when clicking on a link
+        const links = navbar.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

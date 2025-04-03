@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Day Section</title>
+    <link rel="stylesheet" href="test.css">
+    <style>
+        /* General Reset */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9ecef;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: #fff;
+            padding: 10px 15px;
+        }
+        
+        .card-content h3 {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+        
+        .card-content span {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        /* Grid Adjustments */
+        
+        .card.large {
+            grid-column: span 2;
+        }
+        
+        .card.small img {
+            height: 120px;
+        }
+        
+        .icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 5px 8px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Real Madrid Logo">
+
+        </div>
+
+        <div class="menu" id="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#historic">Historic</a>
+            <a href="#trainers">Trainers</a>
+            <a href="shop.html">Shop</a>
+            <a href="sponsors.html">Sponsors</a>
+            <a href="loginandRegister.html" class="sign-in">Sign In</a>
+        </nav>
+    </header>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+
+        // Toggle the navigation menu for small screens
+        const menu = document.getElementById('menu');
+        const navbar = document.getElementById('navbar');
+
+        menu.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Close the menu when clicking on a link
+        const links = navbar.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+            });
+        });
+    </script>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <!-- Grid Layout -->
+        <div class="grid">
+            <!-- Card 1 -->
+            <div class="card large">
+                <img src="Championee.png" alt="Match Day Challenge">
+                <div class="card-content">
+                    <span>Championeee! · 14 Dec 24</span>
+                    <h3>F.C Alpha is now the champion of the Kosovo league</h3>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card large">
+                <img src="AA.png" alt="F.C Alpha O">
+                <div class="card-content">
+                    <span>02:08</span>
+                    <h3>FC Alpha supports the defense of players and all people attacked by bullying.</h3>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="Matchday!2.png" alt="Barça v Leganés">
+                <div class="card-content">
+                    <span>FIRST TEAM · 09 Jan 25</span>
+                    <h3>F.C Alpha vs F.C Oxygen </h3>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="team.jpg" alt="Pere Romeu">
+                <div class="card-content">
+                    <span>00:44</span>
+                    <h3>The U13 generation has achieved very good performances this season!</h3>
+                </div>
+            </div>
+            <div class="card">
+                <img src="goalpost1.jpg" alt="Pere Romeu">
+                <div class="card-content">
+                    <span>00:44</span>
+                    <h3>WHAT A GOALLL ! LORIKK KRASNIQI</h3>
+                </div>
+            </div>
+            <div class="card">
+                <img src="First Team1.jpg" alt="Pere Romeu">
+                <div class="card-content">
+                    <span>00:44</span>
+                    <h3>WIN WIN WIN FORZA F.C ALPHA</h3>
+                </div>
+            </div>
+
+
+            <!-- Card 5 -->
+            <div class="card small">
+                <img src="goalpost2.jpg" alt="Barca Legends">
+                <div class="card-content">
+                    <h3>ANOTHER GOAL ANOTHER WIN WHAT A PLAYER FISNIK PAQARADA</h3>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card small">
+                <img src="gjenerata u15.jpg" alt="Tokyo Day">
+                <div class="card-content">
+                    <h3>The U15 generation of F.C Alpha has received invitations from the biggest tournaments in the world!</h3>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="card small">
+                <img src="fushaedyte.jpg" alt="Ferran Torres">
+                <div class="card-content">
+                    <h3>Good morning from this charming view!</h3>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="card small">
+                <img src="logo2.png" alt="Essentials Collection">
+                <div class="card-content">
+                    <h3>F.C Alpha wishes you happy holidays!</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Football</h3>
+                <ul>
+                    <li><a href="firstteamprova.html">First Team</a></li>
+                    <li><a href="#">Academy</a></li>
+                    <li><a href="#">Women's Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Basketball</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>The Club</h3>
+                <ul>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    <li><a href="#">Values</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Bernabéu Stadium</h3>
+                <ul>
+                    <li><a href="matchdaytour.html">Tour</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                    <li><a href="#">RM Play</a></li>
+                </ul>
+                <div class="footer-apps">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+                    <img src="appstore.svg" alt="App Store">
+                    <img src="huawei.svg" alt="Huawei App Gallery">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section id="sponsors">
+        <div class="sponsors-row">
+            <img src="emirates.svg" alt="Emirates Logo">
+            <img src="adidas.svg" alt="Adidas Logo">
+            <img src="hp.svg" alt="HP Logo">
+        </div>
+        <div class="sponsors-row">
+            <img src="mahou.svg" alt="Mahou Logo">
+            <img src="dubai.svg" alt="Dubai Logo">
+            <img src="bmw.svg" alt="BMW Logo">
+            <img src="ea-sports.svg" alt="EA Sports Logo">
+            <img src="abbot.svg" alt="Abbott Logo">
+            <img src="nivea.svg" alt="Nivea Men Logo">
+            <img src="cantabria.svg" alt="Cantabria Labs Logo">
+            <img src="linglong.svg" alt="Linglong Tire Logo">
+        </div>
+        <div class="sponsors-row">
+            <img src="easymarkets.svg" alt="Easy Markets Logo">
+            <img src="adobe.svg" alt="Adobe Logo">
+            <img src="zegna.svg" alt="Zegna Logo">
+            <img src="palladium.svg" alt="Palladium Hotel Logo">
+            <img src="daktronics.svg" alt="Daktronics Logo">
+            <img src="cisco.svg" alt="Cisco Logo">
+            <img src="softtek.svg" alt="Softtek Logo">
+            <img src="canon.svg" alt="Canon Medical Logo">
+        </div>
+        <div class="sponsors-row">
+            <img src="unicaja.svg" alt="Unicaja Logo">
+            <img src="orange.svg" alt="Orange Logo">
+            <img src="hisense.svg" alt="Hisense Logo">
+            <img src="playstation.svg" alt="PlayStation Logo">
+            <img src="codere.svg" alt="Codere Logo">
+            <img src="sanitas.svg" alt="Sanitas Logo">
+            <img src="cocacola.svg" alt="Coca Cola Logo">
+            <img src="solan.svg" alt="Solan De Cabras Logo">
+        </div>
+    </section>
+</body>
+
+</html>

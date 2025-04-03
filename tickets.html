@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC ALPHA - Ticket Purchase</title>
+    <link rel="stylesheet" href="test.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .ticket-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .match-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .match-info h2 {
+            font-size: 28px;
+            color: #333;
+        }
+        
+        .match-info p {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        .ticket-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .ticket-form label {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .ticket-form select,
+        .ticket-form input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .total-price {
+            grid-column: 1 / -1;
+            text-align: right;
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+        }
+        
+        .purchase-button {
+            grid-column: 1 / -1;
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .purchase-button:hover {
+            background-color: #0056b3;
+        }
+        
+        @media (max-width: 600px) {
+            .ticket-form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Real Madrid Logo">
+
+        </div>
+
+        <div class="menu" id="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#historic">Historic</a>
+            <a href="#trainers">Trainers</a>
+            <a href="shop.html">Shop</a>
+            <a href="sponsors.html">Sponsors</a>
+            <a href="loginandRegister.html" class="sign-in">Sign In</a>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+
+        // Toggle the navigation menu for small screens
+        const menu = document.getElementById('menu');
+        const navbar = document.getElementById('navbar');
+
+        menu.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Close the menu when clicking on a link
+        const links = navbar.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+            });
+        });
+    </script>
+
+    <br>
+    <br>
+
+    <div class="ticket-section">
+        <div class="match-info">
+            <h2>FC ALPHA vs Rival Team</h2>
+            <p>Sunday, December 15th, 2024, 7:00 PM<br>Alpha Stadium</p>
+        </div>
+
+        <form class="ticket-form" id="ticketForm">
+            <div>
+                <label for="ticketType">Select Ticket Type</label>
+                <select id="ticketType">
+                <option value="standard" data-price="50">Standard - $50</option>
+                <option value="vip" data-price="100">VIP - $100</option>
+                <option value="premium" data-price="150">Premium - $150</option>
+                <option value="family" data-price="120">Family Pack - $120</option>
+                <option value="student" data-price="40">Student - $40</option>
+            </select>
+            </div>
+            <div>
+                <label for="ticketQuantity">Quantity</label>
+                <input type="number" id="ticketQuantity" min="1" value="1">
+            </div>
+            <div>
+                <label for="stadiumSection">Stadium Section</label>
+                <select id="stadiumSection">
+                <option value="north">North</option>
+                <option value="south">South</option>
+                <option value="east">East</option>
+                <option value="west">West</option>
+                <option value="vip-box">VIP Box</option>
+            </select>
+            </div>
+            <div>
+                <label for="seatPreference">Seat Preference</label>
+                <select id="seatPreference">
+                <option value="aisle">Aisle Seat</option>
+                <option value="center">Center Seat</option>
+                <option value="front">Front Row</option>
+                <option value="back">Back Row</option>
+            </select>
+            </div>
+            <div>
+                <label for="paymentMethod">Payment Method</label>
+                <select id="paymentMethod">
+                <option value="credit">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="cash">Cash on Entry</option>
+                <option value="bank">Bank Transfer</option>
+            </select>
+            </div>
+            <div>
+                <label for="customerName">Your Name</label>
+                <input type="text" id="customerName" placeholder="Enter your full name">
+            </div>
+            <div>
+                <label for="customerEmail">Your Email</label>
+                <input type="email" id="customerEmail" placeholder="Enter your email">
+            </div>
+            <div>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+            </div>
+            <div>
+                <label for="notes">Special Requests</label>
+                <input type="text" id="notes" placeholder="Add any special requests (optional)">
+            </div>
+            <div class="total-price" id="totalPrice">Total: $50</div>
+            <button type="button" class="purchase-button" onclick="purchaseTickets()">Purchase Tickets</button>
+        </form>
+    </div>
+
+    <script>
+        const ticketType = document.getElementById('ticketType');
+        const ticketQuantity = document.getElementById('ticketQuantity');
+        const totalPrice = document.getElementById('totalPrice');
+
+        function updateTotalPrice() {
+            const selectedOption = ticketType.options[ticketType.selectedIndex];
+            const pricePerTicket = parseFloat(selectedOption.getAttribute('data-price'));
+            const quantity = parseInt(ticketQuantity.value) || 1;
+            totalPrice.textContent = `Total: $${pricePerTicket * quantity}`;
+        }
+
+        ticketType.addEventListener('change', updateTotalPrice);
+        ticketQuantity.addEventListener('input', updateTotalPrice);
+
+        function purchaseTickets() {
+            const name = document.getElementById('customerName').value.trim();
+            const email = document.getElementById('customerEmail').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const quantity = ticketQuantity.value;
+            const ticketTypeSelected = ticketType.options[ticketType.selectedIndex].text;
+            const section = document.getElementById('stadiumSection').value;
+            const seatPreference = document.getElementById('seatPreference').value;
+            const notes = document.getElementById('notes').value.trim();
+
+            if (!name || !email || !phone) {
+                alert('Please fill out all required fields: Name, Email, and Phone Number.');
+                return;
+            }
+
+            alert(`Thank you, ${name}! You purchased ${quantity} tickets (${ticketTypeSelected}) in the ${section} section with a preference for ${seatPreference}. Special notes: ${notes}. Confirmation will be sent to ${email}.`);
+        }
+    </script>
+
+    <br>
+    <br>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Football</h3>
+                <ul>
+                    <li><a href="#">First Team</a></li>
+                    <li><a href="#">Academy</a></li>
+                    <li><a href="#">Women's Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Basketball</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>The Club</h3>
+                <ul>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    <li><a href="#">Values</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Bernabéu Stadium</h3>
+                <ul>
+                    <li><a href="#">Tour</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                    <li><a href="#">RM Play</a></li>
+                </ul>
+                <div class="footer-apps">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+                    <img src="appstore.svg" alt="App Store">
+                    <img src="huawei.svg" alt="Huawei App Gallery">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <section id="sponsors">
+        <div class="sponsors-row">
+            <img src="emirates.svg" alt="Emirates Logo">
+            <img src="adidas.svg" alt="Adidas Logo">
+            <img src="hp.svg" alt="HP Logo">
+        </div>
+        <div class="sponsors-row">
+            <img src="mahou.svg" alt="Mahou Logo">
+            <img src="dubai.svg" alt="Dubai Logo">
+            <img src="bmw.svg" alt="BMW Logo">
+            <img src="ea-sports.svg" alt="EA Sports Logo">
+            <img src="abbot.svg" alt="Abbott Logo">
+            <img src="nivea.svg" alt="Nivea Men Logo">
+            <img src="cantabria.svg" alt="Cantabria Labs Logo">
+            <img src="linglong.svg" alt="Linglong Tire Logo">
+        </div>
+        <div class="sponsors-row">
+            <img src="easymarkets.svg" alt="Easy Markets Logo">
+            <img src="adobe.svg" alt="Adobe Logo">
+            <img src="zegna.svg" alt="Zegna Logo">
+            <img src="palladium.svg" alt="Palladium Hotel Logo">
+            <img src="daktronics.svg" alt="Daktronics Logo">
+            <img src="cisco.svg" alt="Cisco Logo">
+            <img src="softtek.svg" alt="Softtek Logo">
+            <img src="canon.svg" alt="Canon Medical Logo">
+        </div>
+        <div class="sponsors-row">
+            <img src="unicaja.svg" alt="Unicaja Logo">
+            <img src="orange.svg" alt="Orange Logo">
+            <img src="hisense.svg" alt="Hisense Logo">
+            <img src="playstation.svg" alt="PlayStation Logo">
+            <img src="codere.svg" alt="Codere Logo">
+            <img src="sanitas.svg" alt="Sanitas Logo">
+            <img src="cocacola.svg" alt="Coca Cola Logo">
+            <img src="solan.svg" alt="Solan De Cabras Logo">
+        </div>
+    </section>
+</body>
+
+</html>

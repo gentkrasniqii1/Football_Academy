@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista e Ndeshjeve dhe Biletave</title>
+    <link rel="stylesheet" href="test.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        
+        header {
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .containerone {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        
+        .sectionone {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #002b5c;
+            margin-bottom: 20px;
+        }
+        
+        .match-list {
+            border-top: 2px solid #002b5c;
+            padding-top: 20px;
+        }
+        
+        .match-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+        
+        .match-item:last-child {
+            border-bottom: none;
+        }
+        
+        .match-details {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .team {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .team img {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .vs {
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        
+        .match-info {
+            text-align: left;
+        }
+        
+        .match-info p {
+            margin: 5px 0;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #f4a261;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            font-size: 14px;
+        }
+        
+        .btn:hover {
+            background-color: #e76f51;
+        }
+        
+        .btn.disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .month-header {
+            font-size: 20px;
+            color: #002b5c;
+            margin: 20px 0 10px;
+            border-bottom: 2px solid #f4a261;
+            padding-bottom: 5px;
+        }
+        
+        .discount {
+            background-color: #e76f51;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+<<<<<<< HEAD
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Real Madrid">
+        </div>
+        <div class="links">
+            <a href="index.php">Home</a>
+            <a href="tickets.php">Tickets</a>
+            <a href="shop.php">Shop</a>
+            <a href="sponsors.php">Sponsors</a>
+            <a href="contact.php">Contact</a>
+            <a href="matchdaytour.php">FCA Tour</a>
+        </div>
+        <div class="icons">
+            <img src="adidas-removebg-preview.png" alt="Icon 1">
+            <img src="emirates.png" alt="Icon 2">
+        </div>
+        <a href="loginandRegister.html" class="sign-in">Sign in</a>
+        <div class="menu" id="menuToggle"></div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="menu-content" id="menuContent">
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="tickets.php">Tickets</a></li>
+            <li><a href="shop.php">Shop</a></li>
+            <li><a href="index.php">Sponsors</a></li>
+            <li><a href="tickets.php">Contact</a></li>
+            <li><a href="matchdaytour.php">FCA Tour</a></li>
+            <li><a href="#">Football</a>
+                <ul class="submenu">
+                    <li><a href="firstteam.php">First Team</a></li>
+                    <li><a href="womenteam.php">Women's Team</a></li>
+                    <li><a href="academy.php">Academy</a></li>
+                </ul>
+            </li>
+            <li><a href="#">News</a>
+                <ul class="submenu">
+                    <li><a href="news.php">Latest News</a></li>
+                    <li><a href="nextevents.php">Next Events</a></li>
+                    <li><a href="schedule.php">Schedules</a></li>
+                </ul>
+            </li>
+            <li><a href="#">The Club</a>
+                <ul class="submenu">
+                    <li><a href="history.php">History</a></li>
+                    <li><a href="fcalphacity.php">FC ALPHA City</a></li>
+                    <li><a href="stadium.php">New Eagles Stadium</a></li>
+                    <li><a href="honors.php">Honors</a></li>
+                    <li><a href="fanclubs.php">Fan Clubs</a></li>
+                </ul>
+            </li>
+            <li><a href="foundation.php">Foundation</a></li>
+
+            <li><a href="4kpics.php">Best Pictures</a></li>
+            <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menuContent = document.getElementById('menuContent');
+        const overlay = document.getElementById('overlay');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            menuContent.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            menuContent.classList.remove('active');
+            overlay.classList.remove('active');
+=======
+
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Real Madrid Logo">
+
+        </div>
+
+        <div class="menu" id="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#historic">Historic</a>
+            <a href="#trainers">Trainers</a>
+            <a href="shop.html">Shop</a>
+            <a href="sponsors.html">Sponsors</a>
+            <a href="loginandRegister.html" class="sign-in">Sign In</a>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+
+        // Toggle the navigation menu for small screens
+        const menu = document.getElementById('menu');
+        const navbar = document.getElementById('navbar');
+
+        menu.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+
+        // Close the menu when clicking on a link
+        const links = navbar.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navbar.classList.remove('active');
+            });
+>>>>>>> 2689c5d45bcf6081e7d0df6ee8cfafb01ae600a1
+        });
+    </script>
+
+    <br>
+
+    <div class="containerone">
+        <div class="sectionone">
+            <h2>Football Tickets</h2>
+
+            <div class="match-list">
+                <!-- December Matches -->
+                <div class="month-header">December 2024</div>
+
+                <div class="match-item">
+                    <div class="match-details">
+                        <div class="match-info">
+                            <p><strong>Sun 15 Dec</strong> - 21:00</p>
+                            <p>LALIGA - Matchday 17</p>
+                        </div>
+                        <div class="team">
+                            <img src="team1-logo.png" alt="Team 1 Logo">
+                            <span>FC Barcelona</span>
+                            <span class="vs">vs</span>
+                            <img src="team2-logo.png" alt="Team 2 Logo">
+                            <span>Leganés</span>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="btn" id="tickets-btn">Tickets</button>
+                        <button class="btn">Match Day Tour</button>
+                    </div>
+                </div>
+
+                <div class="match-item">
+                    <div class="match-details">
+                        <div class="match-info">
+                            <p><strong>Sat 21 Dec</strong> - 21:00</p>
+                            <p>LALIGA - Matchday 18</p>
+                        </div>
+                        <div class="team">
+                            <img src="team1-logo.png" alt="Team 1 Logo">
+                            <span>FC Barcelona</span>
+                            <span class="vs">vs</span>
+                            <img src="team3-logo.png" alt="Team 3 Logo">
+                            <span>Atlético Madrid</span>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="btn" id="tickets-btn">Tickets</button>
+                        <button class="btn">Match Day Tour</button>
+                    </div>
+                </div>
+
+                <!-- January Matches -->
+                <div class="month-header">January 2025</div>
+
+                <div class="match-item">
+                    <div class="match-details">
+                        <div class="match-info">
+                            <p><strong>Sat 25/Sun 26 Jan</strong></p>
+                            <p>LALIGA - Matchday 21</p>
+                        </div>
+                        <div class="team">
+                            <img src="team1-logo.png" alt="Team 1 Logo">
+                            <span>FC Barcelona</span>
+                            <span class="vs">vs</span>
+                            <img src="team4-logo.png" alt="Team 4 Logo">
+                            <span>Valencia CF</span>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="btn" id="tickets-btn">Tickets</button>
+                        <button class="btn">Match Day Tour</button>
+                    </div>
+                </div>
+
+                <div class="match-item">
+                    <div class="match-details">
+                        <div class="match-info">
+                            <p><strong>Wed 29 Jan</strong> - 21:00</p>
+                            <p>CHAMPIONS LEAGUE - Matchday 8</p>
+                        </div>
+                        <div class="team">
+                            <img src="team1-logo.png" alt="Team 1 Logo">
+                            <span>FC Barcelona</span>
+                            <span class="vs">vs</span>
+                            <img src="team5-logo.png" alt="Team 5 Logo">
+                            <span>Atalanta</span>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="btn" id="tickets-btn">Tickets</button>
+                        <button class="btn">Match Day Tour</button>
+                    </div>
+                </div>
+
+                <!-- February Matches -->
+                <div class="month-header">February 2025</div>
+                <div class="match-item">
+                    <div class="match-details">
+                        <div class="match-info">
+                            <p><strong>Sat 15 Feb</strong> - 18:00</p>
+                            <p>LALIGA - Matchday 22</p>
+                        </div>
+                        <div class="team">
+                            <img src="team1-logo.png" alt="Team 1 Logo">
+                            <span>FC Barcelona</span>
+                            <span class="vs">vs</span>
+                            <img src="team6-logo.png" alt="Team 6 Logo">
+                            <span>Sevilla FC</span>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="btn" id="tickets-btn">Tickets</button>
+                        <button class="btn">Match Day Tour</button>
+                    </div>
+
+                </div>
+
+                <!-- February Matches -->
+                <div class="month-header">February 2025</div>
+                <div class="match-item">
+                    <div class="match-details">
+                        <div class="match-info">
+                            <p><strong>Sat 15 Feb</strong> - 18:00</p>
+                            <p>LALIGA - Matchday 22</p>
+                        </div>
+                        <div class="team">
+                            <img src="team1-logo.png" alt="Team 1 Logo">
+                            <span>FC Barcelona</span>
+                            <span class="vs">vs</span>
+                            <img src="team6-logo.png" alt="Team 6 Logo">
+                            <span>Sevilla FC</span>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="btn" id="tickets-btn">Tickets</button>
+                        <button class="btn">Match Day Tour</button>
+                    </div>
+
+                </div>
+                <!-- February Matches -->
+                <div class="month-header">February 2025</div>
+                <div class="match-item">
+                    <div class="match-details">
+                        <div class="match-info">
+                            <p><strong>Sat 15 Feb</strong> - 18:00</p>
+                            <p>LALIGA - Matchday 22</p>
+                        </div>
+                        <div class="team">
+                            <img src="team1-logo.png" alt="Team 1 Logo">
+                            <span>FC Barcelona</span>
+                            <span class="vs">vs</span>
+                            <img src="team6-logo.png" alt="Team 6 Logo">
+                            <span>Sevilla FC</span>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="btn" id="tickets-btn">Tickets</button>
+                        <button class="btn">Match Day Tour</button>
+                    </div>
+
+                </div>
+                <!-- may Matches -->
+                <div class="month-header">February 2025</div>
+                <div class="match-item">
+                    <div class="match-details">
+                        <div class="match-info">
+                            <p><strong>Sat 15 Feb</strong> - 18:00</p>
+                            <p>LALIGA - Matchday 22</p>
+                        </div>
+                        <div class="team">
+                            <img src="team1-logo.png" alt="Team 1 Logo">
+                            <span>FC Barcelona</span>
+                            <span class="vs">vs</span>
+                            <img src="team6-logo.png" alt="Team 6 Logo">
+                            <span>Sevilla FC</span>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="btn" id="tickets-btn">Tickets</button>
+                        <button class="btn">Match Day Tour</button>
+                    </div>
+                </div>
+
+
+                <script>
+                    // Gjej butonin me ID
+                    document.getElementById('tickets-btn').addEventListener('click', function() {
+                        // Hap faqen ticket.html
+                        window.location.href = 'tickets.html';
+                    });
+                </script>
+                <br>
+                <br>
+
+
+                <footer>
+                    <div class="footer-container">
+                        <div class="footer-column">
+                            <h3>Football</h3>
+                            <ul>
+                                <li><a href="#">First Team</a></li>
+                                <li><a href="#">Academy</a></li>
+                                <li><a href="#">Women's Team</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Basketball</h3>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="news.html">News</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>The Club</h3>
+                            <ul>
+                                <li><a href="#">Schedule</a></li>
+                                <li><a href="#">History</a></li>
+                                <li><a href="sponsors.html">Sponsors</a></li>
+                                <li><a href="#">Values</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Bernabéu Stadium</h3>
+                            <ul>
+                                <li><a href="matchdaytour.html">Tour</a></li>
+                                <li><a href="tickets.html">Tickets</a></li>
+                                <li><a href="#">RM Play</a></li>
+                            </ul>
+                            <div class="footer-apps">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
+                                <img src="appstore.svg" alt="App Store">
+                                <img src="huawei.svg" alt="Huawei App Gallery">
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <br>
+                <section id="sponsors">
+                    <div class="sponsors-row">
+                        <img src="emirates.svg" alt="Emirates Logo">
+                        <img src="adidas.svg" alt="Adidas Logo">
+                        <img src="hp.svg" alt="HP Logo">
+                    </div>
+                    <div class="sponsors-row">
+                        <img src="mahou.svg" alt="Mahou Logo">
+                        <img src="dubai.svg" alt="Dubai Logo">
+                        <img src="bmw.svg" alt="BMW Logo">
+                        <img src="ea-sports.svg" alt="EA Sports Logo">
+                        <img src="abbot.svg" alt="Abbott Logo">
+                        <img src="nivea.svg" alt="Nivea Men Logo">
+                        <img src="cantabria.svg" alt="Cantabria Labs Logo">
+                        <img src="linglong.svg" alt="Linglong Tire Logo">
+                    </div>
+                    <div class="sponsors-row">
+                        <img src="easymarkets.svg" alt="Easy Markets Logo">
+                        <img src="adobe.svg" alt="Adobe Logo">
+                        <img src="zegna.svg" alt="Zegna Logo">
+                        <img src="palladium.svg" alt="Palladium Hotel Logo">
+                        <img src="daktronics.svg" alt="Daktronics Logo">
+                        <img src="cisco.svg" alt="Cisco Logo">
+                        <img src="softtek.svg" alt="Softtek Logo">
+                        <img src="canon.svg" alt="Canon Medical Logo">
+                    </div>
+                    <div class="sponsors-row">
+                        <img src="unicaja.svg" alt="Unicaja Logo">
+                        <img src="orange.svg" alt="Orange Logo">
+                        <img src="hisense.svg" alt="Hisense Logo">
+                        <img src="playstation.svg" alt="PlayStation Logo">
+                        <img src="codere.svg" alt="Codere Logo">
+                        <img src="sanitas.svg" alt="Sanitas Logo">
+                        <img src="cocacola.svg" alt="Coca Cola Logo">
+                        <img src="solan.svg" alt="Solan De Cabras Logo">
+                    </div>
+                </section>
+
+</body>
+
+</html>

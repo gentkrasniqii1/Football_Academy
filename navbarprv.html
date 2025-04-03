@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('Dizajnpatitull.png') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Navbar container */
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 60px;
+            background-color: transparent;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        /* Hamburger icon */
+        .hamburger {
+            cursor: pointer;
+            color: white;
+            font-size: 28px;
+            padding: 10px 20px;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background-color: black;
+            color: white;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: right 0.4s ease-in-out;
+        }
+
+        /* Sidebar links */
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            margin: 20px 0;
+            transition: color 0.3s;  
+            position: relative;
+            top: 50px;
+        }
+
+        .sidebar a:hover {
+            color: red;
+        }
+
+        /* Close button */
+    
+
+        /* Open the sidebar */
+        .sidebar.open {
+            right: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .sidebar a {
+                font-size: 16px;
+            }
+
+            .hamburger {
+                font-size: 24px;
+            }
+        }
+
+        /* Main content styles */
+        .main-content {
+            text-align: center;
+            color: white;
+        }
+
+        .main-content h1 {
+            font-size: 60px;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .main-content p {
+            font-size: 30px;
+            margin: 10px 0;
+        }
+
+        .btn-container {
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            margin: 0 15px;
+            font-size: 20px;
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: darkred;
+        }
+
+        /* Background gradient overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <div class="navbar">
+        <div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#history">History</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#shop">Shop</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="#signin">Sign in/up</a>
+    </div>
+
+    <div class="main-content">
+        
+        <div class="btn-container">
+            <button class="btn">Get Started</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

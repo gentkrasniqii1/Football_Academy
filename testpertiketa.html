@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC ALPHA - Ticket Booking</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2C0B5D;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        .form-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #FFBF00;
+            border-radius: 8px;
+            box-shadow: 0 14px 18px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .radio-group label {
+            font-weight: normal;
+        }
+        
+        .team-logos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .team-logos img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #007bff;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        
+        @media (max-width: 768px) {
+            .team-logos img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<<<<<<< HEAD
+    <div class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Real Madrid">
+        </div>
+        <div class="links">
+            <a href="index.php">Home</a>
+            <a href="tickets.php">Tickets</a>
+            <a href="shop.php">Shop</a>
+            <a href="sponsors.php">Sponsors</a>
+            <a href="contact.php">Contact</a>
+            <a href="matchdaytour.php">FCA Tour</a>
+        </div>
+        <div class="icons">
+            <img src="adidas-removebg-preview.png" alt="Icon 1">
+            <img src="emirates.png" alt="Icon 2">
+        </div>
+        <a href="loginandRegister.html" class="sign-in">Sign in</a>
+        <div class="menu" id="menuToggle"></div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="menu-content" id="menuContent">
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="tickets.php">Tickets</a></li>
+            <li><a href="shop.php">Shop</a></li>
+            <li><a href="index.php">Sponsors</a></li>
+            <li><a href="tickets.php">Contact</a></li>
+            <li><a href="matchdaytour.php">FCA Tour</a></li>
+            <li><a href="#">Football</a>
+                <ul class="submenu">
+                    <li><a href="firstteam.php">First Team</a></li>
+                    <li><a href="womenteam.php">Women's Team</a></li>
+                    <li><a href="academy.php">Academy</a></li>
+                </ul>
+            </li>
+            <li><a href="#">News</a>
+                <ul class="submenu">
+                    <li><a href="news.php">Latest News</a></li>
+                    <li><a href="nextevents.php">Next Events</a></li>
+                    <li><a href="schedule.php">Schedules</a></li>
+                </ul>
+            </li>
+            <li><a href="#">The Club</a>
+                <ul class="submenu">
+                    <li><a href="history.php">History</a></li>
+                    <li><a href="fcalphacity.php">FC ALPHA City</a></li>
+                    <li><a href="stadium.php">New Eagles Stadium</a></li>
+                    <li><a href="honors.php">Honors</a></li>
+                    <li><a href="fanclubs.php">Fan Clubs</a></li>
+                </ul>
+            </li>
+            <li><a href="foundation.php">Foundation</a></li>
+
+            <li><a href="4kpics.php">Best Pictures</a></li>
+            <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menuContent = document.getElementById('menuContent');
+        const overlay = document.getElementById('overlay');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            menuContent.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            menuContent.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    </script>
+
+
+=======
+>>>>>>> 2689c5d45bcf6081e7d0df6ee8cfafb01ae600a1
+    <div class="form-container">
+        <h2>Book Your Ticket</h2>
+
+        <div class="team-logos">
+            <img src="https://via.placeholder.com/50" alt="Home Team Logo">
+            <span>VS</span>
+            <img src="https://via.placeholder.com/50" alt="Away Team Logo">
+        </div>
+
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="match">Select Match:</label>
+                <select id="match" name="match">
+                    <option value="">Choose a match</option>
+                    <option value="match1">Team A vs Team B</option>
+                    <option value="match2">Team C vs Team D</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="stadium">Stadium Capacity:</label>
+                <input type="text" id="stadium" name="stadium" placeholder="Enter stadium capacity" value="50,000" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Ticket Plan:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="ticket_plan" value="basic"> Basic</label>
+                    <label><input type="radio" name="ticket_plan" value="basic_plus"> Basic Plus</label>
+                    <label><input type="radio" name="ticket_plan" value="vip"> VIP Ticket</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="quantity">Number of Tickets:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" placeholder="Enter number of tickets">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label for="payment">Payment Method:</label>
+                <select id="payment" name="payment">
+                    <option value="">Choose a payment method</option>
+                    <option value="credit_card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="crypto">Cryptocurrency</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="card_details">Card Details (if applicable):</label>
+                <input type="text" id="card_details" name="card_details" placeholder="Card Number">
+                <input type="text" id="card_expiry" name="card_expiry" placeholder="Expiry Date (MM/YY)">
+                <input type="text" id="card_cvc" name="card_cvc" placeholder="CVC">
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Additional Notes:</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Enter any additional information"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Proceed to Payment</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
