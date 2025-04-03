@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Champions League Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightgrey;
+            color: #333;
+        }
+
+        .table-container {
+            max-width: 90%;
+            margin: 20px auto;
+            padding: 16px;
+            overflow-x: auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 1.8rem;
+            color: #333;
+        }
+
+        .Tabela {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .Tabela th, .Tabela td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        .Tabela th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        .Tabela tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .Tabela img {
+            max-width: 32px;
+            max-height: 32px;
+            object-fit: contain;
+        }
+
+        .form-guide {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .form-guide span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            font-size: 0.8rem;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+        }
+
+        .win {
+            background-color: green;
+        }
+
+        .draw {
+            background-color: gray;
+        }
+
+        .loss {
+            background-color: red;
+        }
+
+        @media (max-width: 768px) {
+            .Tabela th, .Tabela td {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+
+            .form-guide span {
+                width: 16px;
+                height: 16px;
+                font-size: 0.7rem;
+                line-height: 16px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .table-container {
+                padding: 8px;
+            }
+
+            .Tabela th, .Tabela td {
+                font-size: 0.8rem;
+                padding: 6px;
+            }
+
+            .form-guide span {
+                width: 14px;
+                height: 14px;
+                font-size: 0.6rem;
+                line-height: 14px;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav id="navbar">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#historic">Historic</a>
+            <a href="#trainers">Trainers</a>
+            <a href="shop.html">Shop</a>
+            <a href="sponsors.html">Sponsors</a>
+            <a href="loginandRegister.html" class="sign-in">Sign In</a>
+        </nav>
+    </header>
+
+    <section class="Tabela">
+        <div class="table-container">
+            <h2>League Phase Table</h2>
+            <table class="Tabela">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Team</th>
+                        <th>P</th>
+                        <th>W</th>
+                        <th>D</th>
+                        <th>L</th>
+                        <th>F</th>
+                        <th>A</th>
+                        <th>+/-</th>
+                        <th>Pts</th>
+                        <th>Form</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="liverpool_logo.png" alt="Liverpool"> Liverpool</td>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>13</td>
+                        <td>1</td>
+                        <td>+12</td>
+                        <td>18</td>
+                        <td class="form-guide">
+                            <span class="win">W</span>
+                            <span class="win">W</span>
+                            <span class="win">W</span>
+                            <span class="win">W</span>
+                            <span class="win">W</span>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as necessary -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Football</h3>
+                <ul>
+                    <li><a href="#">First Team</a></li>
+                    <li><a href="#">Academy</a></li>
+                    <li><a href="#">Women's Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Basketball</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>The Club</h3>
+                <ul>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                    <li><a href="#">Values</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("League table loaded successfully!");
+        });
+    </script>
+</body>
+</html>

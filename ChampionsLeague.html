@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Champions League</title>
+    <style>
+        body {
+            background: linear-gradient(to right, blue, violet);
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: fadeIn 2s;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .history,
+        .cards,
+        .table-section {
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .history h2,
+        .cards h2,
+        .table-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            position: relative;
+            animation: slideIn 1s;
+        }
+        
+        @keyframes slideIn {
+            from {
+                top: -50px;
+                opacity: 0;
+            }
+            to {
+                top: 0;
+                opacity: 1;
+            }
+        }
+        
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .card {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+        }
+        
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .card h3 {
+            margin: 10px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid white;
+        }
+        
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+        
+        th {
+            background: rgba(0, 0, 0, 0.7);
+        }
+        
+        td {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .card {
+                width: 45%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to the Champions League!</h1>
+    </header>
+    <section class="history">
+        <h2>History of the Champions League</h2>
+        <p>The UEFA Champions League is an annual club football competition organised by the Union of European Football Associations (UEFA) and contested by top-division European clubs. It is one of the most prestigious tournaments in the world and the most
+            prestigious club competition in European football.</p>
+    </section>
+    <section class="table-section">
+        <h2>League Phase Table</h2>
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Team</th>
+                <th>P</th>
+                <th>W</th>
+                <th>D</th>
+                <th>L</th>
+                <th>F</th>
+                <th>A</th>
+                <th>+/-</th>
+                <th>Pts</th>
+                <th>Form</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Liverpool</td>
+                <td>6</td>
+                <td>6</td>
+                <td>0</td>
+                <td>0</td>
+                <td>13</td>
+                <td>1</td>
+                <td>12</td>
+                <td>18</td>
+                <td>W W W W W</td>
+            </tr>
+            <!-- Repeat rows as needed -->
+        </table>
+    </section>
+    <section class="cards">
+        <h2>Featured Teams</h2>
+        <div class="card">
+            <img src="team1.jpg" alt="Team 1">
+            <h3>Team 1</h3>
+            <p>Team 1 is known for its outstanding performance and has won multiple championships.</p>
+        </div>
+        <div class="card">
+            <img src="team2.jpg" alt="Team 2">
+            <h3>Team 2</h3>
+            <p>Team 2 has a rich history and a strong fan base, making it one of the most popular teams.</p>
+        </div>
+        <div class="card">
+            <img src="team3.jpg" alt="Team 3">
+            <h3>Team 3</h3>
+            <p>Team 3 is renowned for its tactical prowess and has produced many legendary players.</p>
+        </div>
+    </section>
+    <script>
+        // JavaScript for additional functionality can be added here
+    </script>
+</body>
+
+</html>

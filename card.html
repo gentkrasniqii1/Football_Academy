@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Card Section</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        
+        .card-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 15px;
+        }
+        
+        .card-content h3 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .card-content p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .card button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .card button:hover {
+            background-color: #0056b3;
+        }
+        
+        @media (max-width: 768px) {
+            .card img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="card-section">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Card Image 1">
+            <div class="card-content">
+                <h3>Title 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                <button onclick="handleClick('Title 1')">Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Card Image 2">
+            <div class="card-content">
+                <h3>Title 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                <button onclick="handleClick('Title 2')">Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Card Image 3">
+            <div class="card-content">
+                <h3>Title 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                <button onclick="handleClick('Title 3')">Learn More</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Card Image 4">
+            <div class="card-content">
+                <h3>Title 4</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                <button onclick="handleClick('Title 4')">Learn More</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Card Image 1">
+            <div class="card-content">
+                <h3>Title 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                <button onclick="handleClick('Title 1')">Learn More</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Card Image 1">
+            <div class="card-content">
+                <h3>Title 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                <button onclick="handleClick('Title 1')">Learn More</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Card Image 1">
+            <div class="card-content">
+                <h3>Title 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                <button onclick="handleClick('Title 1')">Learn More</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Card Image 1">
+            <div class="card-content">
+                <h3>Title 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                <button onclick="handleClick('Title 1')">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function handleClick(title) {
+            alert(`You clicked on ${title}`);
+        }
+    </script>
+
+</body>
+
+</html>
